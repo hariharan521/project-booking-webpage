@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <title>Book My Journey</title>
+    <link rel="icon" href="image/logo.PNG">
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="style/main.css">
+
+    <!-- Use some free icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+
+    <!-- flatpicker cdn -->
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <style>
+        .aaa1 {
+            width: 100%;
+            height: 100px;
+        }
+
+        .aaa2 {
+            display: flex;
+            position: absolute;
+            top: 20px;
+            left: 130px;
+            height: 30px;
+            padding: 7px;
+        }
+
+        .aaa3 {
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            width: 50px;
+            height: 30px;
+            padding: 5px;
+            position: relative;
+            top: 10px;
+            color: navy;
+
+        }
+
+        .aaa4 {
+            width: 18px;
+            height: 18px;
+            top: 10px;
+            position: relative;
+            top: 16px;
+            margin-left: 13px;
+
+        }
+
+        .aaa5 {
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            width: 50px;
+            height: 30px;
+            padding: 5px;
+            position: relative;
+            top: 10px;
+            color: navy;
+        }
+
+        .aaa1 {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .kk {
+            margin: 0 30px;
+            text-align: center;
+            cursor: pointer;
+            color: gray;
+            transition: color 0.3s;
+        }
+
+        .kk i {
+            font-size: 30px;
+            display: block;
+        }
+
+        .kk span {
+            font-size: 20px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .kk.selected {
+            color: #007BFF;
+            /* Blue color when selected */
+        }
+
+
+
+
+
+        #jjj1 {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid #00abf0;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            color: #333;
+            height: 50px;
+            position: absolute;
+            left: 1220px;
+            top: 30px;
+        }
+
+        .jjj1:hover {
+            border-color: #00abf0;
+            background-color: #e6f7e6;
+        }
+
+
+
+        /* from page */
+
+
+        .mass {
+            width: 100%;
+            height: 350px;
+            background-image: url(image/Premium\ Photo\ _\ Blue\ grunge\ wall\ texture\ background\ premium\ photo.jpeg);
+            display: flex;
+        }
+
+        #mmm1 {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            border-radius: 10px;
+            position: absolute;
+            left: 280px;
+            top: 120px;
+            color: #fff;
+            background-color: #cccccc53;
+            font-weight: 600;
+        }
+
+        #mmm1 option {
+            color: black;
+            background-color: #cccccc53;
+        }
+
+        #mmm1:hover {
+            background-color: #cccccc53;
+
+        }
+
+        #mmm2 {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            border-radius: 10px;
+            position: absolute;
+            left: 460px;
+            top: 120px;
+            color: #fff;
+            background-color: #cccccc53;
+            font-weight: 600;
+        }
+
+        #mmm2 option {
+            color: black;
+            background-color: #cccccc53;
+        }
+
+        #mmm2:hover {
+            background-color: #cccccc53;
+
+        }
+
+        .mmm3 {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            border-radius: 10px;
+            position: absolute;
+            left: 640px;
+            top: 120px;
+            color: #fff;
+            background-color: #cccccc53;
+            font-weight: 600;
+            border: none;
+            text-align: center;
+        }
+
+        .mmm4 {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            border-radius: 10px;
+            position: absolute;
+            left: 810px;
+            top: 120px;
+            color: #fff;
+            background-color: #cccccc53;
+            font-weight: 600;
+            border: none;
+            text-align: center;
+        }
+
+        .mmm5 {
+            width: 200px;
+            height: 45px;
+            border-radius: 30px;
+            background-image: url(image/background.png);
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            position: absolute;
+            top: 105px;
+            left: 990px;
+        }
+
+        .LLL {
+            color: #fff;
+            position: absolute;
+            top: 250px;
+            left: 500px;
+        }
+
+        .LLL1 {
+            font-size: 30px;
+            font-weight: 800;
+            word-spacing: 3px;
+        }
+
+        .LLL2 {
+            font-size: 25px;
+            font-weight: 600;
+            word-spacing: 3px;
+            margin-top: 20px;
+
+        }
+
+
+        .ppp {
+            width: 100%;
+            height: 1280px;
+            background-color: #cccccc53;
+        }
+
+        .ppp1 {
+            width: 50%;
+            height: 130px;
+            border: 1px transparent solid;
+            position: absolute;
+            top: 370px;
+            left: 390px;
+            background-color: #fff;
+            text-align: center;
+
+        }
+
+        .ppp2 {
+            width: 40%;
+            height: 200px;
+            border: 1px black solid;
+            position: absolute;
+            top: 350px;
+            left: 770px;
+            background-color: #fff;
+        }
+
+        .pppp1 {
+            display: flex;
+            position: absolute;
+            left: 90px;
+        }
+
+        .pppp1 p {
+            margin-left: 10px;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-right: 10px;
+
+        }
+
+        .pppp2 {
+            font-weight: 600;
+
+        }
+
+        #displaydate {
+            font-weight: 400;
+        }
+
+        .pppp3 {
+            margin-left: 20px;
+            font-size: 15px;
+            margin-top: 20px;
+            font-weight: 600;
+
+        }
+
+        .ttt {
+            width: 100%;
+            height: 25px;
+            background-color: #33333356;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: 60px;
+
+        }
+
+        .ttt2 {
+            font-weight: 600;
+        }
+
+
+
+        .ooo1 {
+            width: 100%;
+            height: 0px;
+            display: flex;
+        }
+
+        .opo {
+            width: 85%;
+            height: 250px;
+            border: 1px black solid;
+            position: absolute;
+            top: 550px;
+            left: 115px;
+            background-color: #fff;
+            display: flex;
+            border-radius: 20px;
+
+        }
+
+        .opo1 {
+            width: 200px;
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 15px;
+            position: absolute;
+            top: 70px;
+            left: 50px;
+        }
+
+        .opo2 {
+            width: 200px;
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 15px;
+            position: absolute;
+            top: 70px;
+            left: 300px;
+        }
+
+        .opo3 {
+            width: 200px;
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 15px;
+            position: absolute;
+            top: 70px;
+            left: 550px;
+        }
+
+        .opo4 {
+            width: 200px;
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 15px;
+            position: absolute;
+            top: 70px;
+            left: 800px;
+        }
+
+        .opo5 {
+            width: 200px;
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 15px;
+            position: absolute;
+            top: 70px;
+            left: 1050px;
+        }
+
+        .OOP {
+            font-size: 25px;
+            font-weight: 600;
+            position: absolute;
+            top: 20px;
+            left: 70px;
+
+        }
+
+        .OOP1 {
+            font-size: 15px;
+            position: absolute;
+            top: 10px;
+            left: 450px;
+
+        }
+
+        .OOP2 {
+            font-size: 15px;
+            position: absolute;
+            top: 20px;
+            left: 750px;
+        }
+
+        .OOP3 {
+            font-size: 15px;
+            position: absolute;
+            top: 10px;
+            left: 1000px;
+        }
+
+        .ds {
+            position: absolute;
+            top: 20px;
+            left: 650px;
+            font-size: 20px;
+        }
+
+        .ds2 {
+            position: absolute;
+            top: 20px;
+            left: 900px;
+            font-size: 20px;
+        }
+
+        .opoo2 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+        }
+
+        .opoo3 {
+            position: absolute;
+            top: 10px;
+            left: 120px;
+            font-size: 18px;
+        }
+
+        .opoo4 {
+            position: absolute;
+            top: 75px;
+            left: 10px;
+            font-size: 12px;
+        }
+
+        .oooo {
+            width: 130px;
+            height: 50px;
+            color: white;
+            background-image: url(image/background.png);
+            text-align: center;
+            border: none;
+            border-radius: 30px;
+            position: absolute;
+            top: 10px;
+            left: 1130px;
+            text-decoration: none;
+            align-items: center;
+            padding-top: 10px;
+            font-weight: 600;
+        }
+
+        .opooo4 {
+            width: 85%;
+            height: 250px;
+            border: 1px black solid;
+            position: absolute;
+            top: 850px;
+            left: 115px;
+            background-color: #fff;
+            display: flex;
+            border-radius: 20px;
+        }
+
+        .opooo5 {
+            width: 85%;
+            height: 250px;
+            border: 1px black solid;
+            position: absolute;
+            top: 1150px;
+            left: 115px;
+            background-color: #fff;
+            display: flex;
+            border-radius: 20px;
+        }
+
+        .opooo6 {
+            width: 85%;
+            height: 250px;
+            border: 1px black solid;
+            position: absolute;
+            top: 1450px;
+            left: 115px;
+            background-color: #fff;
+            display: flex;
+            border-radius: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="aaa1">
+
+        <div class="aaa2">
+            <h1 class="aaa3">BOOK</h1>
+            <img class="aaa4" src="image/logo.PNG">
+            <h1 class="aaa5">JOURNEY</h1>
+        </div>
+        <!-- <div class="kk selected" id="flight" onclick="navigate('pair1', this)">
+      <i class="fas fa-plane"></i>
+      <span>Flight</span>
+    </div>
+    <div class="kk" id="train" onclick="navigate('train.html', this)">
+      <i class="fas fa-train"></i>
+      <span>Train</span>
+    </div>
+    <div class="kk" id="bus" onclick="navigate('bus.html', this)">
+      <i class="fas fa-bus"></i>
+      <span>Bus</span>
+    </div> -->
+
+        <select name="language" id="jjj1">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+        </select>
+    </nav>
+
+
+    <!--  from page -->
+    <div class="mass">
+        <div>
+            <select id="mmm1">
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Kochin">Kochin</option>
+                <option value="Tiruvanrum">Tiruvanrum</option>
+            </select>
+
+
+            <select id="mmm2">
+                <option value="Tiruvanrum">Tiruvanrum</option>
+                <option value="Kochin">Kochin</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Bangalore">Bangalore</option>
+
+            </select>
+
+
+
+
+
+
+            <input type="date" id="dateInput" class="mmm3">
+
+
+
+            <input type="text" id="searchInput" class="mmm4" placeholder="Travellers" value="Travellers"
+                style="width: 150px; color: #fff;">
+            <div id="dropdownList" class="dropdown-list"></div>
+
+
+            <button class="mmm5" onclick="pair() ">Search</button>
+        </div>
+
+
+        <div class="LLL">
+            <h1 class="LLL1">WELCOME TO COIMBATORE - TIRUVANRUM </h1>
+            <h2 class="LLL2">TRAINS FOR CBE - TVM</h2>
+        </div>
+    </div>
+
+
+    <div class="ppp">
+
+        <div class="ppp1">
+            <div class="pppp1">
+                <p class="pppp2">COIMBATORE → TIRUVANRUM</p>
+                <p id="displayDate"></p>
+
+                <p class="pppp3"> TIRUVANRUM → COIMBATORE</p>
+            </div>
+
+
+            <div class="ttt">
+                <p class="ttt1">
+                    Departure
+                </p>
+                <p>
+                    Duration
+                </p>
+                <p>
+                    Arrival
+                </p>
+                <p class="ttt2">
+                    price ↑
+
+                </p>
+            </div>
+        </div>
+
+        <div class="ooo1">
+            <div class="opo">
+                <h1 class=" OOP">TIRUVANRUM EXPRESS</h1>
+                <p class="OOP1"><b>11.15 PM</b><br>COIMBATORE</p>
+                <p class="ds">→ </p>
+
+                <p class="OOP2">7.15m</p>
+
+                <p class="ds2">→ </p>
+                <p class="OOP3"><b>6.30 AM</b><br>TIRUVANRUM</p>
+                <a class="oooo" href="trainbook.html">Booknow</a>
+
+
+
+                <div class="opo1">
+                    <h2 class="opoo2">3A</h2>
+                    <h2 class="opoo3">₹1500</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+
+                </div>
+                <div class="opo2">
+                    <h2 class="opoo2">2A</h2>
+                    <h2 class="opoo3">₹1200</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+                </div>
+                <div class="opo3">
+                    <h2 class="opoo2">1A</h2>
+                    <h2 class="opoo3">₹950</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+                </div>
+                <div class="opo4">
+                    <h2 class="opoo2">SL</h2>
+                    <h2 class="opoo3">₹450</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation</p>
+                </div>
+                <div class="opo5">
+                    <h2 class="opoo2">GL</h2>
+                    <h2 class="opoo3">₹250</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation</p>
+                </div>
+            </div>
+
+            <!-- second -->
+            <div class="opooo4">
+                <h1 class=" OOP">KOVAI EXPRESS</h1>
+                <p class="OOP1"><b>11.15 PM</b><br>TIRUVANRUM</p>
+                <p class="ds">→ </p>
+
+                <p class="OOP2">7.15m</p>
+
+                <p class="ds2">→ </p>
+                <p class="OOP3"><b>6.30 AM</b><br>COIMBATORE</p>
+                <a class="oooo" href="trainbook.html">Booknow</a>
+
+
+
+                <div class="opo1">
+                    <h2 class="opoo2">3A</h2>
+                    <h2 class="opoo3">₹1500</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+
+                </div>
+                <div class="opo2">
+                    <h2 class="opoo2">2A</h2>
+                    <h2 class="opoo3">₹1200</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+                </div>
+                <div class="opo3">
+                    <h2 class="opoo2">1A</h2>
+                    <h2 class="opoo3">₹950</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+                </div>
+                <div class="opo4">
+                    <h2 class="opoo2">SL</h2>
+                    <h2 class="opoo3">₹450</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation</p>
+                </div>
+                <div class="opo5">
+                    <h2 class="opoo2">GL</h2>
+                    <h2 class="opoo3">₹250</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation</p>
+                </div>
+
+
+            </div>
+
+            <!-- THIRD -->
+            <div class="opooo5">
+                <h1 class=" OOP">KOLAM EXPRESS</h1>
+                <p class="OOP1"><b>11.15 PM</b><br>TIRUVANRUM</p>
+                <p class="ds">→ </p>
+
+                <p class="OOP2">7.15m</p>
+
+                <p class="ds2">→ </p>
+                <p class="OOP3"><b>6.30 AM</b><br>COIMBATORE</p>
+                <a class="oooo" href="trainbook.html">Booknow</a>
+
+
+
+                <div class="opo1">
+                    <h2 class="opoo2">3A</h2>
+                    <h2 class="opoo3">₹1500</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+
+                </div>
+                <div class="opo2">
+                    <h2 class="opoo2">2A</h2>
+                    <h2 class="opoo3">₹1200</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+                </div>
+                <div class="opo3">
+                    <h2 class="opoo2">1A</h2>
+                    <h2 class="opoo3">₹950</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+                </div>
+                <div class="opo4">
+                    <h2 class="opoo2">SL</h2>
+                    <h2 class="opoo3">₹450</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation</p>
+                </div>
+                <div class="opo5">
+                    <h2 class="opoo2">GL</h2>
+                    <h2 class="opoo3">₹250</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation</p>
+                </div>
+
+
+            </div>
+            <!-- FOURTH -->
+            <div class="opooo6">
+                <h1 class=" OOP">INTERCITY EXPRESS</h1>
+                <p class="OOP1"><b>11.15 PM</b><br>COIMBATORE</p>
+                <p class="ds">→ </p>
+
+                <p class="OOP2">7.15m</p>
+
+                <p class="ds2">→ </p>
+                <p class="OOP3"><b>6.30 AM</b><br>TIRUVANRUM</p>
+                <a class="oooo" href="trainbook.html">Booknow</a>
+
+
+
+                <div class="opo1">
+                    <h2 class="opoo2">3A</h2>
+                    <h2 class="opoo3">₹1500</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+
+                </div>
+                <div class="opo2">
+                    <h2 class="opoo2">2A</h2>
+                    <h2 class="opoo3">₹1200</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+                </div>
+                <div class="opo3">
+                    <h2 class="opoo2">1A</h2>
+                    <h2 class="opoo3">₹950</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation </p>
+                </div>
+                <div class="opo4">
+                    <h2 class="opoo2">SL</h2>
+                    <h2 class="opoo3">₹450</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation</p>
+                </div>
+                <div class="opo5">
+                    <h2 class="opoo2">GL</h2>
+                    <h2 class="opoo3">₹250</h2>
+                    <br>
+                    <p class="opoo4">Free cancellation</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const dateInput = document.getElementById('dateInput');
+        const displayDate = document.getElementById('displayDate');
+
+        // Set today's date as default
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.value = today;
+        displayDate.textContent = today;
+
+        // When user changes the date
+        dateInput.addEventListener('change', function () {
+            displayDate.textContent = this.value;
+        });
+
+
+
+        // traveelres
+
+        const options = [
+            '1 Traveller', '2 Travellers', '3 Travellers', '4 Travellers', '5 Travellers',
+            '6 Travellers', '7 Travellers', '8 Travellers', '9 Travellers', '10 Travellers',
+
+        ];
+
+        const input = document.getElementById('searchInput');
+        const dropdown = document.getElementById('dropdownList');
+
+        function filterDropdown(value) {
+            dropdown.innerHTML = '';
+            const filtered = options.filter(option =>
+                option.toLowerCase().includes(value.toLowerCase())
+            );
+
+            if (filtered.length === 0) {
+                dropdown.style.display = 'none';
+                return;
+            }
+
+            filtered.forEach(option => {
+                const item = document.createElement('div');
+                item.textContent = option;
+                item.onclick = () => {
+                    input.value = option;
+                    dropdown.style.display = 'none';
+                };
+                dropdown.appendChild(item);
+            });
+
+            dropdown.style.display = 'block';
+        }
+
+        input.addEventListener('input', () => {
+            const value = input.value.trim();
+            if (value === '') {
+                dropdown.style.display = 'none';
+            } else {
+                filterDropdown(value);
+            }
+        });
+
+        input.addEventListener('click', () => {
+            if (input.value.trim() !== '') {
+                filterDropdown(input.value);
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!document.querySelector('.dropdown-container').contains(e.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+
+
+        // pair
+
+        const pairs = {
+            "Coimbatore-Chennai": "pair1.html",
+            "Chennai-Coimbatore": "pair1.html",
+
+            "Chennai-Bangalore": "pair2.html",
+            "Bangalore-Chennai": "pair2.html",
+
+
+            "Coimbatore-Kochin": "pair3.html",
+            "Kochin-Coimbatore": "pair3.html",
+
+
+            "Bangalore-Kochin": "pair4.html",
+            "Kochin-Bangalore": "pair4.html",
+
+            "Chennai-Kochin": "pair5.html",
+            "Kochin-Chennai": "pair5.html",
+
+
+            "Chennai-Tiruvanrum": "pair6.html",
+            "Tiruvanrum-Chennai": "pair6.html",
+
+
+            "Bangalore-Tiruvanrum": "pair8.html",
+            "Tiruvanrum-Bangalore": "pair8.html",
+
+            "Bangalore-Coimbatore": "pair9.html",
+            "Coimbatore-Bangalore": "pair9.html",
+
+        };
+
+        function pair() {
+            const cc1 = document.getElementById("mmm1").value;
+            const cc2 = document.getElementById("mmm2").value;
+
+            if (cc1 && cc2 && cc1 !== cc2) {
+                const key = `${cc1}-${cc2}`;
+                if (pairs[key]) {
+                    window.location.href = pairs[key];
+                } else {
+                    alert("No page exists for this pair.");
+                }
+            } else {
+                alert("Please select two different cities.");
+            }
+
+
+
+
+        }
+        function navigate(page, element) {
+            // Remove 'selected' from all items
+            //   const items = document.querySelectorAll('.kk');
+            items.forEach(item => item.classList.remove('selected'));
+
+            // Add 'selected' to the clicked item
+            element.classList.add('selected');
+
+            // Navigate to new page
+            setTimeout(() => {
+                window.location.href = page;
+            }, 200); // slight delay to show the color change
+        }
+
+
+
+        // dropdown
+
+
+
+        constdropdown = document.getElementById('jjj1');
+
+        dropdown.addEventListener('change', function () {
+            const selectedLanguage = dropdown.options[dropdown.selectedIndex].text;
+            alert('You selected: ' + selectedLanguage);
+        });
+
+
+
+        // date
+    </script>
+
+</body>

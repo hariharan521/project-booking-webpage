@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <title>Book My Journey</title>
+    <link rel="icon" href="image/logo.PNG">
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="style/main.css">
+    <!-- flatpicker cdn -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+    <!-- hearder -->
+    <div class="header">
+
+
+        <!-- popup -->
+        <div class="overly"></div>
+
+
+        <!-- navbar -->
+        <div class="navbar">
+            <!-- logo -->
+            <div class="logo">
+                <h1 class="logo1">BOOK</h1>
+                <img class="logo2" src="image/logo.PNG">
+                <h1 class="logo3">JOURNEY</h1>
+            </div>
+
+            <!-- dropdown for login -->
+            <div class="dropdown" style="position: absolute;left: 1100px;top: -5px;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false"
+                    style="width: 170px; height: 40px; font-size: 10px;background-image: url(image/background.png); border: #37c6ff; box-shadow: 1px 1px #00abf0; border-radius: 10px;">
+                    Login or Create Account
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                    style="position: absolute ; top: 75px; left: 20px; width: 110px;">
+                    <li><a class="dropdown-item" onclick="log() " style="width: 157px; text-align: center;">Login</a>
+                    </li>
+                    <li><a class="dropdown-item" onclick="sign()" style="width: 157px; text-align: center;">Sign up</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- language -->
+            <!-- Example single danger button -->
+            <div class="btn-group" style="position: absolute; left: 1300px; top: -5px;">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="border: #fff; border-radius: 10px; background-color: #fff; color: black; box-shadow: 1px 1px #fff; font-size: 13px; width: 150px; height: 37px; text-align: center;">
+                    Language
+                </button>
+                <ul class="dropdown-menu" style="position: absolute; top: 75px; left: 10px; text-align: center  ;width: 100px; ;
+                height: 100px;">
+                    <li><a class="dropdown-item" href="#"
+                            style="display: block; text-align: center; width: 160px;">English</a></li>
+                    <li><a class="dropdown-item" href="#"
+                            style="display: block; text-align: center; width: 160px;">Hindi</a></li>
+                    <li><a class="dropdown-item" href="#"
+                            style="display: block; text-align: center; width: 160px;">Tamil</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <center>
+            <div class="login">
+                <h1 class="l1">Login</h1>
+                <div class="cross1"><img class="cross" onclick="clo()" src="image/cross.png"></div>
+
+                <p class="user"> Username <input type="text" id="user1" placeholder="Username">
+                <p><br>
+                <p class="pass"> Password <input type="password" id="pass1" placeholder="password"></p>
+                <button onclick="validateInput()" class="btn">Login</button>
+            </div>
+
+            <!-- sign up -->
+            <div class="signup">
+                <h1 class="l1">Sign up</h1>
+                <div class="cross1"><img class="cross" onclick="ose()" src="image/cross.png"></div>
+
+                <p class="first1">First Name <input type="text" id="first" placeholder="FirstName"></p>
+                <p class="last1">Last Name <input type="text" id="last" placeholder="LastName"></p>
+                <p class="user"> Username <input type="text" id="used" placeholder="Username">
+                <p><br>
+                <p class="set"> Set Password <input type="password" id="pased" placeholder="password"></p>
+                <button onclick="third() " class="btnn">signup</button>
+            </div>
+        </center>
+
+        <!-- alret boxes  -->
+        <div id="overlay1">
+            <div id="customAlert">
+                <p id="alertMessage"></p>
+                <button id="closeBtn" onclick="closeAlert()">Close</button>
+            </div>
+        </div>
+
+        <div id="over2">
+            <div id="custom4">
+                <p id="alertMes"></p>
+                <button id="cl4" onclick="thr()">Close</button>
+            </div>
+        </div>
+
+
+
+
+        <!-- navgation spot -->
+
+        <div class="second">
+            <div class="div1">
+                <span class="airplane">
+                    <a href="index.html" style="text-decoration:none;color: black;"><img class="air1" onclick="ha()"
+                            src="image/icons8-airplane-50.png"><br>
+                        <h2>Flights</h2>
+                    </a>
+                </span>
+            </div>
+
+             <div class="div">
+                <span class="bus">
+                    <a href="index.html" style="text-decoration:none; color: black;"><img class="hot"
+                            src="image/icons8-bus-50.png"><br>
+                        <h2 class="sub">Buses</h2>
+                    </a>
+                </span>
+            </div> 
+
+
+            <div class="div">
+                <span class="train">
+                    <a href="index.html" style="text-decoration:none; color: black;"><img class="train1"
+                            src="image/steam-locomotive.png"><br>
+                        <h2>Train</h2>
+                    </a>
+
+
+                </span>
+
+            </div>
+        </div>
+
+        <!-- search bar -->
+        <div class="tww">
+            <div>
+                <ul class="option">
+                    <li class="option1">
+                        <input class="one-way" type="radio" name="on" value="one way">
+                        <P></P>One Way
+                    <li class="option2">
+                        <input class="round-trip" type="radio" name="on" value="round trip" id="">
+                        <p>Round Trip</p>
+                    </li>
+                    <li class="option3">
+                        <input class="multi-trip" type="radio" name="on" value="multi trip" id="">
+                        <p>Multi Trip</p>
+                    </li>
+                    </li>
+
+
+                    <li class="para">
+                        <p>Booking International And Domestic Flights</p>
+
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+
+            <!-- form to box -->
+
+            <div class="container">
+
+
+
+
+
+                <select id="city1">
+                    <option value="">--From Location--</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Kochin">Kochin</option>
+                    <option value="Tiruvanrum">Tiruvanrum</option>
+                </select>
+
+                <select id="city2">
+                    <option value="">--To Location--</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Kochin">Kochin</option>
+                    <option value="Tiruvanrum">Tiruvanrum</option>
+                </select>
+                <!--     
+                <button onclick="searchPair()">Search</button> -->
+
+
+
+
+
+                <div class="date-box">
+                    <label for="departure"> <img class="down" src=""></label>
+                    <input type="text" id="departure" placeholder="Select departure date" onclick="one()">
+                    <div class="day-display" id="departureDay"></div>
+                    <div class="a1">Departure date</div>
+                </div>
+
+                <div class="date-box1">
+                    <label for="return"> <img class="down" src=></label>
+                    <input type="text" id="return" placeholder="Select return date">
+                    <div class="day-display" id="returnDay"></div>
+                    <div class="a2">Return date</div>
+                </div>
+
+
+
+                <div class="dropdown-container3">
+                    <label></label>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Travellers">
+                    <div id="dropdownList" class="dropdown-list"></div>
+                    <div class="a3">Travellers</div>
+                </div>
+
+            </div>
+            <button class="search" onclick="searchPair() ">Search</button>
+
+        </div>
+    </div>
+    <p class="explore">
+
+        <b>&#8659;
+        </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&#8659;
+        </b><br>
+        &nbsp;&nbsp;&nbsp;&nbsp; <b>EXPLORE MORE</b> &nbsp;&nbsp; <br>
+        <b>&#8659; </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&#8659;
+        </b>
+    </p>
+
+    <!-- last nav -->
+
+    <div class="lastest-row">
+
+        <div class="where">
+            <img class="go" src="image/icons8-direction-50.png">
+            <p class="where-go">Where2Go</p>
+
+        </div>
+
+        <div class="in">
+            <img class="insure" src="image/icons8-flight-insurance-50.png">
+            <p class="insurance"><b>Insurance</b><br>
+                For International Trips</p>
+
+        </div>
+
+        <div class="f1">
+            <img class="f2" src="image/icons8-flight-50.png">
+            <p class="international"><b style="color: black;">Explore international Flights</b><br>
+                - Cheapest Flights to Paris, Bali, Tokyo & More
+
+                <!-- <p class="f3"> Explore International Flights</p> -->
+
+
+        </div>
+
+        <div class="e1">
+            <img class="e2" src="image/icons8-team-leader-50.png">
+            <p class="e3"><b>MICE</b><br>
+                Offsite, Events&Meeting</p>
+
+        </div>
+
+        <div class="g1">
+            <img class="g2" src="image/icons8-gift-30.png">
+            <p class="g3"><b>Gift Cards</b><br></p>
+
+        </div>
+    </div>
+
+
+    <div class="summa">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+            style="height: 300px; margin-top: 50px; z-index: 0; width: 90%; margin-left: 80px; border-radius: 40px;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="height: 700px;border-radius: 40px;" src="image/indigo.jpg" class="d-block w-100"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img style="height: 700px; border-radius: 40px;" src="image/knjux6v4br-bus-depot-7-o0tef.avif"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img style="height: 700px;border-radius: 40px;"
+                        src="image/Planning a first solo trip to India + Is backpacking India alone really that hard_! India travel tips for beginners - Flashpacking Kerala.jpeg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev" style="position: absolute; top: 300px;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next" style="position: absolute; top: 300px;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        
+
+    </div>
+
+    <!-- contact -->
+
+
+    <div class="qr">
+        <div class="qr1">
+            <img class="qrimg" src="image/Mobile-Gift-45.png">
+        </div>
+        <div class="qr2">
+            <h1 class="qr3 ">Download App Now !</h1>
+            <P class="qr4">Use Code <b>WELCOME and get FLAT 12%</b>OFF* on your First domestic Flight Booking</P>
+            <div>
+
+                <input class="qr5" type="number" value="number" placeholder="+91">
+            </div>
+              <div class="ooo">GET THIS APP</div>
+
+        </div>
+
+        <div class="qr9">
+            <img class="qr10" src="image/iii.jpg">
+            <div>
+                <img class="qr11" src="image/iiiiiii.jpg">
+            </div>
+
+        </div>
+
+        <div>
+            <img class="qr12" src="image/qr.png">
+        </div>
+    </div>
+<!-- links -->
+    <div class="about">
+        <div class="pp1">BOOK MY JOURNEY</div>
+        <blockquote class="pp2">Us, Investor Relations, Careers, Sustainability, MMT Foundation, Legal Notices, CSR Policy & Committee, myPartner - Travel Agent Portal, List your hotel, Partners- Redbus, Partners- Goibibo, Advertise with Us, Holiday-Franchise, Partners- BookMyForex, RedBus Ferry Malaysia, RedBus Ferry Singapore, redBus Vietnam, redBus Cambodia, Things to Do in Malaysia, Things to Do in Singapore</blockquote> 
+        
+
+    </div>
+
+    
+
+    <div class="dd">
+        <div class="dd1">ABOUT THR SITE</div>
+        <blockquote class="dd2">Customer Support, Payment Security, Privacy Policy, Cookie Policy, User Agreement, Terms of Service, Franchise Offices, Make A Payment, Work From Home, Escalation Channel, Report Security Issues
+       </blockquote> 
+        
+
+    </div>
+
+    <div class="dd3">
+        <div class="dd4">CORPORATE TRAVELS</div>
+        <blockquote class="dd5">Business Travel, Corporate Travel, Corporate Travel Management, Corporate Travel Solution, Corporate Hotel Booking, Corporate Flight Booking, Expense Management, Corporate Expense Management, GST on Hotel Rooms, GST on Flight Tickets, Business Travel for SME, GST Invoice for International flights, GST Invoice for Bus, GST on Train Tickets, T&E (Travel & Expense), myBiz - Best Business Travel Platform, GST Invoice for Corporate Travel, myBiz for Small Business, Free cancellation on International Flights
+       </blockquote> 
+        
+
+    </div>
+
+    <div class="dd6">
+        <div class="dd7">PRODUCT OFFERING</div>
+        <blockquote class="dd8">Flights, International Flights, Charter Flights, Hotels, International Hotels, Homestays and Villas, Activities, Holidays In India, International Holidays, Book Hotels From UAE, myBiz for Corporate Travel, Book Online Cabs, Book Bus Tickets, Book Train Tickets, Cheap Tickets to India, Book Flights From US, Book Flights From UAE, Trip Planner, Forex Card, Buy Foreign Currency, Travel Insurance, Travel Insurance Thailand, Travel Insurance For UAE, Travel Insurance For Indonesia, Travel Insurance For Vietnam, Travel Insurance For Europe, Travel Insurance For USA, Travel Insurance for Singapore, Travel Insurance for Malaysia, Travel Insurance for Sri Lanka, Travel Insurance for United Kingdom, Travel Insurance for Canada, Gift Cards, Gift, Wedding Gift, Anniversary Gift, Birthday Gift, Diwali Gift, Valentines Gift, Farewell Gift, Christmas Gift, New Year Gift, Trip Ideas, Travel Blog, PNR Status, MakeMyTrip Advertising Solutions, One Way Cab
+       </blockquote> 
+        
+
+    </div>
+
+
+    <div class="hh1">
+
+        <div class="hh2">
+            <h1 class="hh3">WHY BOOK MY JOURNEY ?</h1>
+            <P class="hh4">Established in 2025, Book my journey has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</P>
+
+        </div>
+        <div class="hh5">
+            <h1 class="hh6">Booking Flights with Bookmyjourney</h1>
+            <p class="hh7">At Bookmyjourney, you can find the best of deals and cheap air tickets to any place you want by booking your tickets on our website or app. Being India’s leading website for hotel, flight, and holiday bookings, MakeMyTrip helps you book flight tickets that are affordable and customized to your convenience. With customer satisfaction being our ultimate goal, we also have a 24/7 dedicated helpline to cater to our customer’s queries and concerns. Serving over 5 million happy customers, we at MakeMyTrip are glad to fulfill the dreams of folks who need a quick and easy means to find air tickets. You can get a hold of the cheapest flight of your choice today while also enjoying the other available options for your travel needs with us.
+            </p>
+
+        </div>
+        <div class="hh8">
+            <h1 class="hh9">Domestic Flights with Bookmyjourney
+            </h1>
+            <p class="hh10">MakeMyTrip is India's leading player for flight bookings. With the cheapest fare guarantee, experience great value at the lowest price. Instant notifications ensure current flight status, instant fare drops, amazing discounts, instant refunds and rebook options, price comparisons and many more interesting features.
+            </p>
+
+        </div>
+
+    </div>
+    <!-- FOOTER -->
+
+
+    <div class="footer">
+        <a href=""><img src="image/12+ Logo Instagram Png Black White.jpeg"></a>
+        <a href=""><img src="image/Así es el nuevo logo de Twitter.jpeg"></a>
+        <a href=""><img src="image/icon linkedin black.jpeg"></a>
+        <a href=""><img src="image/facebook.jpeg"></a>
+
+        <h2 class="FFF2">© 2025 BOOKMYJOURNEY PVT. LTD.</h2>
+
+        <a class="fff4" href="index.html"><img style="height: 50px; width: 50px;" class="fff3" src="image/up-arrow.png"></a>
+
+    </div>
+
+
+    
+
+
+
+   
+    <!-- jquery -->
+    <script src="java/jquery-3.7.1.slim.js"></script>
+
+    <!-- bootstrap.js -->
+    <script src="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
+    <!-- custom js -->
+    <script src="java/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <title>Book My Journey</title>
+  <link rel="icon" href="image/logo.PNG">
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 700px;
+      height: 430px;
+
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 50%;
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      justify-content: center;
+      margin-left: 200px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #confirmation {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: green;
+      margin-top: 55px;
+      text-align: center;
+    }
+
+    .jjj {
+      width: 1200px;
+      height: 200px;
+      border: 1px black solid;
+      border-radius: 20px;
+      position: absolute;
+      top: 600px;
+      background-color: white;
+      background-image: url(image/travel-and-flight-ticket-advertising-template-with-airplane-in-the-sky-colorful-background-in-paper-cut-style-illustration-vector.jpg);
+      display: none;
+
+    }
+
+    .pp {
+      margin-left: 200px;
+      margin-top: 20px;
+
+    }
+
+    #ooo {
+      width: 700px;
+      height: 30px;
+      border-bottom: black 2px dashed;
+      margin-left: 50px;
+      text-align: center;
+      font-size: 18px;
+      padding-top: 0;
+      margin-top: -25px;
+      font-weight: 600;
+
+    }
+
+    .pp1 {
+      margin-left: 200px;
+      margin-top: 50px;
+      display: flex;
+    }
+
+    #oo1 {
+      width: 100px;
+      height: 20px;
+     font-weight: 600;
+
+    }
+
+    .pp2 {
+      margin-left: 500px;
+      margin-top: -20px;
+      display: flex;
+    }
+
+    #oo2 {
+      width: 100px;
+      height: 20px;
+      font-weight: 600;
+    }
+
+    .pp3 {
+      margin-left: 700px;
+      margin-top: -20px;
+      display: flex;
+    }
+
+    #oo3 {
+      width: 100px;
+      height: 20px;
+      font-weight: 600;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .lw {
+      width: 130px;
+      height: 130px;
+      position: absolute;
+      top: 40px;
+      left: 1020px;
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <div class="container">
+    <h2>Flight Ticket Booking</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="departure">Departure City:</label>
+      <input type="text" id="departure" name="departure" required />
+
+      <label for="destination">Destination City:</label>
+      <input type="text" id="destination" name="destination" required />
+
+      <label for="date">Travel Date:</label>
+      <input type="date" id="date" name="date" required />
+
+
+      <button type="submit">Book Now</button>
+    </form>
+
+  </div>
+  <div class="jjj" id="kl">
+    <div class="pp">
+
+      NAME : <div id="ooo"> </div>
+    </div>
+    <div class="pp1">
+      From: <div id="oo1"></div>
+    </div>
+
+    <div class="pp2">
+      To: <div id="oo2"></div>
+    </div>
+
+    <div class="pp3">
+      Date: <div id="oo3"></div>
+    </div>
+
+
+    <div id="confirmation"></div>
+
+    <img class="lw" src="image/qr.png" alt="">
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const departure = document.getElementById("departure").value;
+      const destination = document.getElementById("destination").value;
+      const date = document.getElementById("date").value;
+      var pop = document.getElementById("kl")
+
+
+      const confirmationMsg = `
+    Booking Confirmed!<br>`
+
+      document.getElementById("confirmation").innerHTML = confirmationMsg;
+      document.getElementById("ooo").innerHTML = name;
+      document.getElementById("oo1").innerHTML = departure;
+      document.getElementById("oo2").innerHTML = destination;
+      document.getElementById("oo3").innerHTML = date;
+      pop.style.display= "block";
+    });
+  </script>
+</body>
+
+</html>
